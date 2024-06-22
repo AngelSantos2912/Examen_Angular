@@ -1,1 +1,20 @@
-<p>login works!</p>
+<mat-card class="example-card" style="align-items: center; width: 50%;height: 50%; float: left; top: 25%; left: 25%; background: rgb(242, 255, 220);">
+    <h1>Ingresar</h1>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Ingrese su Usuario</mat-label>
+      <input matInput placeholder="Ingrese su Usuario" type="text">
+    </mat-form-field>
+<br>
+    <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+<br>
+      <button mat-stroked-button color="warn"><mat-icon>login</mat-icon>Ingresar</button>
+
+  </form>
+</mat-card>
