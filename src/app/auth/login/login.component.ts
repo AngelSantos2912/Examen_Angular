@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from '../../angular_material/material/material.module';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +12,14 @@ import { MaterialModule } from '../../angular_material/material/material.module'
 })
 export class LoginComponent {
 
-  hide = true;
+  constructor(private authService: AuthService, private router: Router){
+  }
 
+  submit(usuario: HTMLInputElement,
+    password: HTMLInputElement){
+      this.authService.login(usuario.value, password.value)
+
+      this.router.navigateByUrl("/dashboard")
+
+    }
 }

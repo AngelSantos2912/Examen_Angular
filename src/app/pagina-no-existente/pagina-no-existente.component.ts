@@ -10,6 +10,5 @@ import { MaterialModule } from '../angular_material/material/material.module';
 })
 export class PaginaNoExistenteComponent {
 
-  imagen = "https://www.empresawebs.com/wp-content/uploads/2015/05/error-404-700x294.png";
 
 }

@@ -1,13 +1,11 @@
 <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
+  <button mat-flat-button color="" style="margin: 5px;" (click)="irpregunat1()"><mat-icon>check_circle</mat-icon>Pregunta 1</button>
+    <button mat-flat-button color="" style="margin: 5px;" (click)="irpregunta2()"><mat-icon>check_circle</mat-icon>Pregunta 2</button>
+    <button mat-flat-button color="" style="margin: 5px;" (click)="irpregunta3()"><mat-icon>check_circle</mat-icon>Pregunta 3</button>
+    <button mat-flat-button color="" style="margin: 5px;" (click)="irpregunta4()"><mat-icon>check_circle</mat-icon>Pregunta 4</button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="logout()">
+    <mat-icon>power_settings_new</mat-icon>
+  </button>
+
   </mat-toolbar>
+  <router-outlet />

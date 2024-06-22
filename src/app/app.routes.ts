@@ -10,6 +10,8 @@ import { PaginaNoExistenteComponent } from './pagina-no-existente/pagina-no-exis
 
 export const routes: Routes = [
 
+    {path: "", redirectTo:"login", pathMatch:"full"},
+
 {path: "login", component:LoginComponent},
 {path: "dashboard", component:DashboardComponent, 
    canActivate:[authGuard], 
@@ -19,6 +21,5 @@ children:[
     {path: "pregunta3", component:Pregunta3Component},
     {path: "pregunta4", component:Pregunta4Component}
 ]},
-{path: "**", component:PaginaNoExistenteComponent},
-{path: "", redirectTo:"login", pathMatch:"full"}
+{path: "**", component:PaginaNoExistenteComponent}
 ];
